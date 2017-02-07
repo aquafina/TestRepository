@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<xs:schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/select_order_data" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/select_order_data" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="OeOrderHeadersAllCollection" type="OeOrderHeadersAllCollection"/>
+   <xs:complexType name="OeOrderHeadersAllCollection">
+      <xs:sequence>
+         <xs:element name="OeOrderHeadersAll" type="OeOrderHeadersAll" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="OeOrderHeadersAll">
+      <xs:sequence>
+         <xs:element name="headerId" type="xs:decimal"/>
+         <xs:element name="orgId" type="xs:decimal" nillable="true"/>
+         <xs:element name="orderNumber" type="xs:decimal"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="select_order_dataSelect_header_id_filterInputParameters" type="select_order_dataSelect_header_id_filter"/>
+   <xs:complexType name="select_order_dataSelect_header_id_filter">
+      <xs:sequence>
+         <xs:element name="header_id_filter" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>

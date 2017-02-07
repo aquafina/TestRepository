@@ -1,0 +1,25 @@
+<?binding.jca select_order_data_db.jca?>
+<wsdl:definitions name="select_order_data" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/copy_order_bpm/oe_order_data/select_order_data" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/copy_order_bpm/oe_order_data/select_order_data" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/select_order_data">
+    <plt:partnerLinkType name="select_order_data_plt">
+        <plt:role name="select_order_data_role">
+            <plt:portType name="tns:select_order_data_ptt"/>
+        </plt:role>
+    </plt:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/select_order_data" schemaLocation="xsd/select_order_data_table.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="select_order_dataSelect_inputParameters">
+        <wsdl:part name="select_order_dataSelect_inputParameters" element="top:select_order_dataSelect_header_id_filterInputParameters"/>
+    </wsdl:message>
+    <wsdl:message name="OeOrderHeadersAllCollection_msg">
+        <wsdl:part name="OeOrderHeadersAllCollection" element="top:OeOrderHeadersAllCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="select_order_data_ptt">
+        <wsdl:operation name="select_order_dataSelect">
+            <wsdl:input message="tns:select_order_dataSelect_inputParameters"/>
+            <wsdl:output message="tns:OeOrderHeadersAllCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.2.22" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="CopyOeOrderData">
+        <topicDocumentations>
+            <topicDocumentation name="CopyOeOrderData">
+                <labels>
+                    <label locale="en">copy_oe_order_data</label>
+                </labels>
+                <descriptions>
+                    <description locale="en">copy_oe_order_data</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT18418055176120">
+                <labels>
+                    <label locale="en">select_data_from_table</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT18417667987883">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT18417667987925">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="sf17"/>
+            <topicDocumentation name="sf21"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>
